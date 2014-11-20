@@ -1,0 +1,177 @@
+body {
+	overflow-x: hidden;
+}
+
+.heading {
+	background-color: #5772A3;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 1.25em;
+	padding: 20px 0;
+}
+.subheading {
+	text-align: center;
+	font-style: italic;
+	font-size: 1.25em;
+	padding: 20px 0;
+}
+
+/* -------------------------------------- Draggables --------------------------------------------- */
+
+.drag-container {
+	position: relative;
+	margin-top: 50px;
+}
+
+.drag-item {
+	text-align: center;
+}
+
+.drag-item img {
+	border: 1px solid #999999;
+	max-width: 100%;
+}
+
+.dragged {
+	height: 75px;
+	width: 75px;
+}
+
+/* ---------------------------------------- Droppables ------------------------------------------- */
+
+.drop-area {
+	-webkit-box-shadow: 1px 0px 10px 5px rgba(173,168,173,1);
+	-moz-box-shadow: 1px 0px 10px 5px rgba(173,168,173,1);
+	box-shadow: 1px 0px 10px 5px rgba(173,168,173,1);
+	background-color: #637EAD;
+	border: 2px solid #BBBBBB;
+	border-radius: 5px;
+	height: 120px;
+	line-height: 120px;
+	margin: 20px auto;
+	padding: 0 10px;
+	text-align: center;
+	width: 120px;
+}
+
+.drop-over {
+	border-color: #DFDFDF;
+}
+
+.drop-area span {
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFFFFF;
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+.never {
+	background-color: #999999;
+}
+
+/* -------------------------------------------- Sortables --------------------------------------- */
+
+#drop-options {
+	border-radius: 5px;
+	background-color: #647CA8;
+	padding: 5px;
+}
+
+.sort-item {
+	background-color: #FFFFFF;
+}
+
+.sort-drop-item {
+	border: none !important;
+	background-color: #BFCADD;
+	line-height: 55px !important;
+	margin-bottom: 10px !important;
+}
+
+.sort-item, .sort-drop-item {
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #A9A9A9;
+	border-radius: 5px;
+	margin: 5px;
+	font-weight: bold;
+}
+
+.sort-item {
+	width: calc(100% - 32px);
+	z-index: 10;
+}
+
+.sort-item span, .sort-drop-item span {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+.drop-shadow {
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(163,163,163,1);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(163,163,163,1);
+	box-shadow: 5px 5px 5px 0px rgba(163,163,163,1);
+}
+
+.shadow-inset {
+	-webkit-box-shadow: inset 5px 5px 5px 0px rgba(163,163,163,1);
+	-moz-box-shadow: inset 5px 5px 5px 0px rgba(163,163,163,1);
+	box-shadow: inset 5px 5px 5px 0px rgba(163,163,163,1);
+}
+
+.sort-drop-over {
+	background-color: #FF0000;
+}
+
+.sort-item-container {
+	margin: 0;
+	position: relative;
+	height: 65px;
+}
+
+/* -------------------------------------------- Mobile-specific stylesheets --------------------------------------- */
+
+@media all and (max-width: 767px) {
+	.drop-area {
+		height: 80px;
+		line-height: 80px;
+		width: 80px;
+	}
+
+	.drop-area span {
+		font-size: 11px;
+	}
+
+	.heading, .subheading {
+		font-size: 12px;
+	}
+
+	.heading {
+		padding: 5px 0;
+	}
+
+	.subheading {
+		padding: 5px 0;
+	}
+
+	.dragged {
+		height: 55px;
+		width: 55px;
+	}
+
+	.sort-item, .sort-drop-item {
+		line-height: 35px;
+		font-size: 11px;
+	}
+
+	.sort-drop-item {
+		line-height: 40px !important;
+	}
+
+	.sort-item-container {
+		height: 45px;
+	}
+}

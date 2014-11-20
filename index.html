@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%;">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+	<title>SSI Assignment - Romuald Halasz</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="libs/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+
+	<link href="css/main.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+	<![endif]-->
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+		</div>
+	</header>
+
+	<br /><br />
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1" style="font-size: 26px;">
+				<p>Hello and welcome!</p>
+				<p>This application replicates two examples, illustrating drag and drop functionality.</p>
+				<p>Candidate: <strong>Romuald Halasz, Timisoara, Romania</strong></p>
+
+				<br />
+				<p>
+					The replicated examples are:
+					<ol>
+						<li>Drag &amp; Drop - First example, drop item on frequency option</li>
+						<li>Sort - Sixth example, ranking 3 items based on preference  </li>
+					</ol>
+				</p>
+			</div>
+		</div>
+
+		<br /><br />
+
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-3 col-xs-6">
+				<a href="drag.html" class="btn btn-lg btn-default pull-right">
+					Example 1 <span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+			<div class="col-sm-offset-1 col-sm-3 col-xs-6">
+				<a href="sort.html" class="btn btn-lg btn-default">
+					Example 2 <span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+		</div>
+
+		<br /><br />
+
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1">
+				<p>
+					Additional details:
+				</p>
+
+				<p>
+					This sections aims to explain in details different aspects of the application.
+				</p>
+
+				<p>
+					First, let's take at a look at the tools used:
+
+					<ol>
+						<li>
+							<a href="http://jquery.com/">jQuery 1.11</a>
+							<p></p>
+						</li>
+						<li>
+							<a href="http://getbootstrap.com/">Twitter Bootstrap 3.1</a>
+							<p>
+								Cross-browser responsive layout library.
+							</p>
+						</li>
+						<li>
+							<a href="http://handlebarsjs.com/">Handlebars 1.3</a>
+							<p>
+								JavaScript-based template engine.
+							</p>
+						</li>
+						<li>
+							<a href="https://github.com/briangonzalez/jquery.pep.js/">jQuery Pep 0.6</a>
+							<p>
+								Cross-platform drag/drop event wrapper.
+							</p>
+
+							<p>
+								The module offers mainly dragging and only some rudimentary dropping.
+								This module was used mainly to bridge the gap between desktop and mobile devices.
+								Specifically, to provide a wrapper for mouse/touch events.
+							</p>
+
+							<p>
+								Added functionality: droppable targets dispatch <strong>'dragover', 'dragout' and 'dropover'</strong> events.
+							</p>
+						</li>
+					</ol>
+				</p>
+
+				<p>
+					Next, let's have a look at the application file structure and code.
+				</p>
+
+				<p>
+					The code can be found in the <strong>GitHub repo</strong> available here:<br />
+					<a href="https://github.com/nvcaine/dds">Code repository</a>
+				</p>
+				<p>
+					This the application structure:
+					<ul>
+						<li>
+							<strong>root</strong>
+
+							<ul>
+								<li><strong>assets/</strong></li>
+								<li><strong>css/</strong></li>
+								<li>
+									<strong>js/</strong>
+									<ul>
+										<li>
+											<strong>config/</strong>
+											<p>
+												* constants and content data
+											</p>
+										</li>
+										<li>
+											<strong>sections/</strong>
+											<p>
+												* scripts that run when the document dispatches the 'ready' event
+											</p>
+										</li>
+										<li>
+											<strong>templates/</strong>
+											<ul>
+												<li>
+													<strong>items/</strong>
+													<p>
+														* handlebars templates
+													</p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>libs/</strong>
+									<p>
+										* external libraries, jQuery modules
+									</p>
+								</li>
+								<li><strong>index.html</strong></li>
+								<li><strong>drag.html</strong></li>
+								<li><strong>sort.html</strong></li>
+							</ul>
+						</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+
+		<br /><br />
+	</div>
+
+	<footer></footer>
+
+	<!-- modules -->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+	<script src="libs/jQuery.1.11.0/jquery-1.11.0.min.js"></script>
+	<script src="libs/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+	<script src="libs/handlebars-1.3.0/handlebars.js"></script>
+
+	<!-- consts -->
+
+	<!-- helpers -->
+
+	<!-- templates: components -->
+
+	<!-- templates: popups -->
+
+	<!-- templates: item renderers -->
+
+	<!-- templates: partials -->
+
+	<!-- custom libraries -->
+
+	<!-- section script -->
+
+</body>
+</html>
